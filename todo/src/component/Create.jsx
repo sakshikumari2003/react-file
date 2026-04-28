@@ -18,13 +18,14 @@ const Create = (props) => {
     settitle("");
   }
   return (
-    <> <h1>create tasks</h1>
+    <div className="w-[60%] p-10 ">
+       <h1 className="mb-10 text-5xl font-thin">Set <span className="text-red-400">Reminder</span> for <br /> task</h1>
       <form onSubmit={SubmitHandler}>
-        <input onChange={(e)=>settitle(e.target.value)} type="text" value={title} placeholder='task' />
+        <input className="p-2 outline-0 border-b w-full text-2xl font-thin" onChange={(e)=>settitle(e.target.value)} type="text" value={title} placeholder='task' />
         <br />
-        <button>create todo</button>
+        <button className="text-xl px-10 py-2 border rounded mt-5">create todo</button>
       </form>
-      </>
+      </ div>
   )
 }
 

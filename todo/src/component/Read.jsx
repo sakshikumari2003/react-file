@@ -8,19 +8,19 @@ const Read = (props) => {
     }
 
     const rendertodo=todos.map((todo)=>{
-    return <li key={todo.id}className="flex justify-between items-center bg-white shadow-md p-3 rounded-lg mb-3">
-      {todo.title}
+    return <li key={todo.id} className="flex justify-between item-center p-3 bg-gray-900 rounded mb-4">
+      <span className="text-xl font-thin">{todo.title}</span> 
 
-      <button onClick={()=>DeleteHandler(todo.id)} className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md transition">
-        delete</button>
+      <button onClick={()=>DeleteHandler(todo.id)} className="font-thin text-white-400 text-sm bg-red-800  w-12 " >
+         Delete</button>
       </li>
     // why we use () => ?
     // 👉 Because we want to pass a value (todo.id) to function
    // 👉 AND we don’t want it to run immediately
   });
   return (
-    <div className="max-w-md mx-auto mt-6 ">
-      <h1 className="text-2xl font-bold text-center mb-4 text-gray-800">pending todo</h1>
+    <div className="w-[40%] p-10" >
+      <h1 className="mb-10 text-5xl font-thin"><span className="text-yellow-600">pending</span> todo</h1>
       <ol>{rendertodo}</ol>
       </div>
   )

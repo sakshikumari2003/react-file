@@ -13,12 +13,12 @@ const App = () => {
   
 
   return (
-    <div className='min-h-screen bg-gray-600  flex justify-center items-start pt-10 bg-gradient-to-r'>
-      <div className="w-full max-w-md">
+    <div className='text-white flex w-screen h-screen bg-gray-800 p-10'>
+     
         <Create todos={todos} settodos={settodos} />
       <hr />
       <Read todos={todos} settodos={settodos}/>
-      </div>
+      
       
     </div>
   )
